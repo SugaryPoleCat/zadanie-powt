@@ -37,6 +37,11 @@ namespace ZadaniePowtorkowe
             sygnatura = $"SYG-{ind}";
         }
 
-        public int 
+        /// <summary>
+        /// Kontruktor parametryczny
+        /// </summary>
+        /// <param name="dW">Data wydania</param>
+        /// <param name="cP">Cena podstawowa</param>
+        public Publikacja(DateTime dW, decimal cP) { }
     }
 }

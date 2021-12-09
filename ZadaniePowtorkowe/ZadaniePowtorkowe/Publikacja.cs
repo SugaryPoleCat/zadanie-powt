@@ -10,9 +10,9 @@ namespace ZadaniePowtorkowe
     {
         static int indeks;
         static decimal cenaDodatkowa;
-        static string sygnatura;
-        static DateTime dataWydania;
-        static decimal cenaPodstawowa;
+        private string sygnatura;
+        private DateTime dataWydania;
+        private decimal cenaPodstawowa;
 
         /// <summary>
         /// Statyczny konstruktor, ktory ustawia rzeczy
@@ -33,8 +33,10 @@ namespace ZadaniePowtorkowe
             // SYG-00001; 
             // index = index + 1;
             // w sygnaturze index ma byc zwiekszany o 1.
-            int ind = indeks + 1;
-            sygnatura = $"SYG-{ind.ToString("D").Length + 4}";
+            int ind = indeks;
+            indeks++;
+            //sygnatura = $"SYG-{ind.ToString("D").Length + 4}";
+            this.sygnatura = $"SYG-{ind:0000}";
         }
 
         /// <summary>
@@ -42,8 +44,10 @@ namespace ZadaniePowtorkowe
         /// </summary>
         /// <param name="dW">Data wydania</param>
         /// <param name="cP">Cena podstawowa</param>
-        public Publikacja(string dW, decimal cP) {
+        public Publikacja(string dW, decimal cP) : this()
+        { 
             // dataWydania = dW;
+            //DateTime.TryParse(dW, out dataWydania);
             DateTime.TryParseExact(dW, new string[] { "dd-MMM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out dataWydania);
             cenaPodstawowa = cP;
         }
@@ -68,7 +72,8 @@ namespace ZadaniePowtorkowe
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{sygnatura}, {ObliczCene()}, {dataWydania:dd-MMM-yyyy}";
+            decimal cena = ObliczCene();
+            return $"{sygnatura}, {ObliczCene().ToString("C")}, {dataWydania:dd-MMM-yyyy}";
         }
     }
 }

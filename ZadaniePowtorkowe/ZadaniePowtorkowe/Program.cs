@@ -10,12 +10,13 @@ namespace ZadaniePowtorkowe
     {
         static void Main(string[] args)
         {
+            for(int i = 0; i < 3; i++)
+            {
+                // domyslny
+                Publikacja dupa = new Publikacja("20-Cze-2020", 20);
+                // parametryczny
+            }
             // static
-            Publikacja.index(1, 1.5m);
-            // domyslny
-            Publikacja dupa = new Publikacja();
-            // parametryczny
-            Publikacja cycki = new Publikacja();
 
             Console.ReadKey();
         }

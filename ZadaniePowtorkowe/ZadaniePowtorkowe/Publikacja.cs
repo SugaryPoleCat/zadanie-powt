@@ -19,10 +19,10 @@ namespace ZadaniePowtorkowe
         /// </summary>
         /// <param name="ind">Indeks</param>
         /// <param name="cD">Cena Dodatkowa</param>
-        static public void index(int ind, decimal cD)
+        static Publikacja()
         {
-            indeks = ind;
-            cenaDodatkowa = cD;
+            indeks = 1;
+            cenaDodatkowa = 1.5m;
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace ZadaniePowtorkowe
             // index = index + 1;
             // w sygnaturze index ma byc zwiekszany o 1.
             int ind = indeks + 1;
-            sygnatura = $"SYG-{ind}";
+            sygnatura = $"SYG-{ind.ToString("D").Length + 4}";
         }
 
         /// <summary>
@@ -42,8 +42,9 @@ namespace ZadaniePowtorkowe
         /// </summary>
         /// <param name="dW">Data wydania</param>
         /// <param name="cP">Cena podstawowa</param>
-        public Publikacja(DateTime dW, decimal cP) {
-            dataWydania = dW;
+        public Publikacja(string dW, decimal cP) {
+            // dataWydania = dW;
+            DateTime.TryParseExact(dW, new string[] { "dd-MMM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out dataWydania);
             cenaPodstawowa = cP;
         }
 
@@ -59,6 +60,15 @@ namespace ZadaniePowtorkowe
             DateTime now = DateTime.Now;
             decimal age = now.Year - dataWydania.Year;
             return cenaPodstawowa + cenaDodatkowa * age;
+        }
+
+        /// <summary>
+        /// Przeslonienie ToString zeby printowac syugnatura, obliczcene, datawydania w formacie dd-MMM-yyyy
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return $"{sygnatura}, {ObliczCene()}, {dataWydania:dd-MMM-yyyy}";
         }
     }
 }

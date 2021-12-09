@@ -10,8 +10,12 @@ namespace ZadaniePowtorkowe
     {
         static void Main(string[] args)
         {
+            // static
             Publikacja.index(1, 1.5m);
+            // domyslny
             Publikacja dupa = new Publikacja();
+            // parametryczny
+            Publikacja cycki = new Publikacja();
 
             Console.ReadKey();
         }

@@ -1,0 +1,8 @@
+D:\Programming\CS\zadanie-powt\ZadaniePowtorkowe\ZadaniePowtorkowe\bin\Debug\ZadaniePowtorkowe.exe.config
+D:\Programming\CS\zadanie-powt\ZadaniePowtorkowe\ZadaniePowtorkowe\bin\Debug\ZadaniePowtorkowe.exe
+D:\Programming\CS\zadanie-powt\ZadaniePowtorkowe\ZadaniePowtorkowe\bin\Debug\ZadaniePowtorkowe.pdb
+D:\Programming\CS\zadanie-powt\ZadaniePowtorkowe\ZadaniePowtorkowe\obj\Debug\ZadaniePowtorkowe.csproj.AssemblyReference.cache
+D:\Programming\CS\zadanie-powt\ZadaniePowtorkowe\ZadaniePowtorkowe\obj\Debug\ZadaniePowtorkowe.csproj.SuggestedBindingRedirects.cache
+D:\Programming\CS\zadanie-powt\ZadaniePowtorkowe\ZadaniePowtorkowe\obj\Debug\ZadaniePowtorkowe.csproj.CoreCompileInputs.cache
+D:\Programming\CS\zadanie-powt\ZadaniePowtorkowe\ZadaniePowtorkowe\obj\Debug\ZadaniePowtorkowe.exe
+D:\Programming\CS\zadanie-powt\ZadaniePowtorkowe\ZadaniePowtorkowe\obj\Debug\ZadaniePowtorkowe.pdb

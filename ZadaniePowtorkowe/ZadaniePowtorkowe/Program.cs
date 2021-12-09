@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace ZadaniePowtorkowe
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
+            Publikacja.index(1, 1.5m);
+            Publikacja dupa = new Publikacja();
+
+            Console.ReadKey();
         }
     }
 }

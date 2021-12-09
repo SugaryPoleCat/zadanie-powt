@@ -6,18 +6,37 @@ using System.Threading.Tasks;
 
 namespace ZadaniePowtorkowe
 {
-    internal class Publikacja
+    class Publikacja
     {
-        static int index;
+        static int indeks;
         static decimal cenaDodatkowa;
         static string sygnatura;
         static DateTime dataWydania;
         static decimal cenaPodstawowa;
 
-        static void indeks(int ind, decimal cD)
+        /// <summary>
+        /// Statyczny konstruktor, ktory ustawia rzeczy
+        /// </summary>
+        /// <param name="ind">Indeks</param>
+        /// <param name="cD">Cena Dodatkowa</param>
+        static public void index(int ind, decimal cD)
         {
-            index = ind;
+            indeks = ind;
             cenaDodatkowa = cD;
         }
+
+        /// <summary>
+        /// Konstruktor domyslny, nie zawiera parametrow, tylko ustawia wartosci
+        /// </summary>
+        public Publikacja()
+        {
+            // SYG-00001; 
+            // index = index + 1;
+            // w sygnaturze index ma byc zwiekszany o 1.
+            int ind = indeks + 1;
+            sygnatura = $"SYG-{ind}";
+        }
+
+        public int 
     }
 }

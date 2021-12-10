@@ -19,6 +19,12 @@ namespace ZadaniePowtorkowe
             Ksiazka kurwa = new Ksiazka("20-jan-2000", 23, "Chuj", EnumDziedzina.ekonomia);
             Console.WriteLine(kurwa.ToString());
 
+            Biblioteczka b = new Biblioteczka();
+            b.Dodaj(dupa);
+            b.Dodaj(cycki);
+            b.Dodaj(kurwa);
+            b.Dodaj(chuj);
+
             Console.ReadKey();
         }
     }

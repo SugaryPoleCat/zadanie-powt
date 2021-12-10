@@ -1,0 +1,14 @@
+﻿1 zrobione
+2 zrobione
+5 zrobione
+4 robimy
+3 50/50
+	zostalo: 
+	wstaw
+	usun
+	zamien
+	iEquatable
+	icomparable
+	iclonable
+	Sortuj()
+	ToStringS

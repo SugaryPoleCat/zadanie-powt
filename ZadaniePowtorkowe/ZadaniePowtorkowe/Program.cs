@@ -16,6 +16,8 @@ namespace ZadaniePowtorkowe
             Console.WriteLine(dupa.ToString());
             Console.WriteLine(cycki.ToString());
             Console.WriteLine(chuj.ToString());
+            Ksiazka kurwa = new Ksiazka("20-jan-2000", 23, "Chuj", EnumDziedzina.ekonomia);
+            Console.WriteLine(kurwa.ToString());
 
             Console.ReadKey();
         }

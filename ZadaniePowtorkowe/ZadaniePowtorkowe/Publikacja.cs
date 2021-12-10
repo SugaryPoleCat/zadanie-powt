@@ -10,9 +10,10 @@ namespace ZadaniePowtorkowe
     {
         static int indeks;
         static decimal cenaDodatkowa;
-        private string sygnatura;
-        private DateTime dataWydania;
+        protected string sygnatura;
+        protected DateTime dataWydania;
         private decimal cenaPodstawowa;
+        protected decimal cena;
 
         /// <summary>
         /// Statyczny konstruktor, ktory ustawia rzeczy
@@ -73,8 +74,9 @@ namespace ZadaniePowtorkowe
             DateTime now = DateTime.Now;
             // w C# mozna wyciagnac .Year czyli rok z naszej daty.
             decimal age = now.Year - dataWydania.Year;
+            cena = cenaPodstawowa + cenaDodatkowa * age;
             // rob obliczenie.
-            return cenaPodstawowa + cenaDodatkowa * age;
+            return cena;
         }
 
         /// <summary>

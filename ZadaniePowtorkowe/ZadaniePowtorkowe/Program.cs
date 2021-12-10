@@ -11,10 +11,10 @@ namespace ZadaniePowtorkowe
         static void Main(string[] args)
         {
             Publikacja dupa = new Publikacja("20-jun-2020", 20);
-            Console.WriteLine(dupa.ToString());
             Publikacja cycki = new Publikacja("20-jun-2010", 21);
-            Console.WriteLine(cycki.ToString());
             Publikacja chuj = new Publikacja("20-jun-2000", 22);
+            Console.WriteLine(dupa.ToString());
+            Console.WriteLine(cycki.ToString());
             Console.WriteLine(chuj.ToString());
 
             Console.ReadKey();

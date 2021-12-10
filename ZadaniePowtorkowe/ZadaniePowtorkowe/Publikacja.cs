@@ -11,9 +11,18 @@ namespace ZadaniePowtorkowe
         static int indeks;
         static decimal cenaDodatkowa;
         protected string sygnatura;
-        protected DateTime dataWydania;
+        private DateTime dataWydania;
         private decimal cenaPodstawowa;
-        protected decimal cena;
+        private decimal cena;
+
+        /// <summary>
+        /// Wez sygnature do uzycie w innych klasach
+        /// </summary>
+        public string Sygnatura { get => sygnatura; }
+
+        public DateTime DataWydania { get => dataWydania; }
+
+        public int Indeks { get => indeks; }
 
         /// <summary>
         /// Statyczny konstruktor, ktory ustawia rzeczy

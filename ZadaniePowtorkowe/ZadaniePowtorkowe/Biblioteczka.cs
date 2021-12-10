@@ -82,9 +82,9 @@ namespace ZadaniePowtorkowe
         /// <summary>
         /// Wstawia publikacje (nie moze byc null) na okreslona pozycje w kolekcji
         /// </summary>
-        /// <param name="indeks">Pozycja</param>
+        /// <param name="ind">Pozycja</param>
         /// <param name="ubikacja">Publikcja</param>
-        public void Wstaw(int indeks, Publikacja ubikacja)
+        public void Wstaw(int ind, Publikacja ubikacja)
         {
             // to samo co dodaj
         }
@@ -92,15 +92,16 @@ namespace ZadaniePowtorkowe
         /// <summary>
         /// Usuwa publikacje na danym indeksie
         /// </summary>
-        /// <param name="indeks">Pozycja</param>
+        /// <param name="ind">Pozycja</param>
         public void Usun(int ind)
         {
             try {
                 // najpierw znajdz publikacje
                 //Publikacja p = publikacje.FirstOrDefault(pub => pub.indeks.Equals(ind));
 
-            // potem ja usun.
-                
+                // potem ja usun.
+                Publikacja p = publikacje.FirstOrDefault(p1 => p1.Indeks.Equals(ind));
+                publikacje.Remove(p);
             }
             catch(Exception e)
             {
@@ -141,24 +142,29 @@ namespace ZadaniePowtorkowe
         /// <exception cref="NotImplementedException"></exception>
         public object Clone()
         {
-            throw new NotImplementedException();
+            return MemberwiseClone();
         }
 
         // to kurwa wiadmom
         public bool Equals(Publikacja other)
         {
-            throw new NotImplementedException();
+
+            return;
+        }
+
+        public int IComparable.CompareTo(Publikacja other)
+        {
+            Publikacja p = 
+            // to jest standarowa funkcja ktora tru musi byc z tego jebanego IComparable
         }
 
         /// <summary>
-        ///  na hcuj na to
+        /// Sortuj publikacje na podstawie sygnatury
+        /// jak sortowac wedlug sygnatury I wedlug daty wydania? nie mam pojecia.,..
         /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public int CompareTo(Publikacja other)
+        public void Sortuj()
         {
-            throw new NotImplementedException();
+            publikacje.Sort((p1, p2) => p1.Sygnatura.CompareTo(p2.Sygnatura));
         }
 
         /// <summary>
